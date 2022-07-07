@@ -9,7 +9,7 @@ plugins {
 }
 
 group = "com.bayonasoftware.batteryplus.api.microservices"
-version = "0.0.1-SNAPSHOT"
+version = "1.0.0"
 java.sourceCompatibility = JavaVersion.VERSION_17
 
 repositories {
@@ -17,9 +17,11 @@ repositories {
 }
 
 dependencies {
-  implementation("org.springframework.boot:spring-boot-starter-data-jpa")
   implementation("org.jetbrains.kotlin:kotlin-reflect")
   implementation("org.jetbrains.kotlin:kotlin-stdlib-jdk8")
+  implementation("org.springframework.boot:spring-boot-starter-data-jpa")
+  implementation("com.fasterxml.jackson.core:jackson-annotations:2.13.3")
+  implementation("org.hibernate:hibernate-core:5.4.33.Final")
   runtimeOnly("com.microsoft.sqlserver:mssql-jdbc")
   testImplementation("org.springframework.boot:spring-boot-starter-test")
 }

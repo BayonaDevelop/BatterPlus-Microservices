@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+
+    <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property>
+    <property name="hibernate.connection.url">jdbc:sqlserver://localhost:1433;databaseName=BatteryPlus;integratedSecurity=false;encrypt=true;trustServerCertificate=true</property>
+    <property name="hibernate.connection.username">sa</property>
+    <property name="hibernate.connection.password">sql</property>
+    <property name="dialect">org.hibernate.dialect.SQLServer2012Dialect</property>
+
+    <property name="hibernate.connection.pool_size">100</property>
+    <property name="show_sql">true</property>
+
+    <!-- <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Country"/>
+    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.City"/>
+    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Municipality"/>
+    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Location"/>
+    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Colony"/>
+    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Street"/>
+    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Address"/>
+    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.CommercialBranch"/>
+    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Warehouse"/>
+    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.WarehouseSection"/>
+    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Person"/>
+    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Telephone"/>
+    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.User"/>
+    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Rol"/> -->
+
+  </session-factory>
+</hibernate-configuration>
