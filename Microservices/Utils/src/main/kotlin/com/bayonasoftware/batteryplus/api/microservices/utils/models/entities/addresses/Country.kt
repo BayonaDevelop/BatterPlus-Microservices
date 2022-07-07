@@ -11,7 +11,7 @@ class Country : java.io.Serializable {
 
   private val serialVersionUID = 1L
 
-  @get:Id
+  @Id
   @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", nullable = false)
   var id: Int? = null
@@ -40,8 +40,8 @@ class Country : java.io.Serializable {
   @get:Column(name = "Flag")
   var flag: String? = null
 
-  @get:JsonIgnore
-  @get:OneToMany(fetch = FetchType.LAZY, mappedBy = "country")
+  @JsonIgnore
+  @OneToMany(fetch = FetchType.LAZY, mappedBy = "country")
   var cities: MutableSet<City>? = null
 
 }
