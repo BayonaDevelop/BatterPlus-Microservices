@@ -11,11 +11,11 @@ class Municipality : java.io.Serializable {
 
   private val serialVersionUID = 1L
 
-  @get:ManyToOne(fetch = FetchType.LAZY)
+  @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "City_ID")
   var city: City? = null
 
-  @get:Id
+  @Id
   @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", nullable = false)
   var id:Int? = null
@@ -29,8 +29,8 @@ class Municipality : java.io.Serializable {
   @get:Column(name = "Coat_Of_Arms")
   var coatOfArms: String? = null
 
-  @get:JsonIgnore
-  @get:OneToMany(fetch = FetchType.LAZY, mappedBy = "municipality")
+  @JsonIgnore
+  @OneToMany(fetch = FetchType.LAZY, mappedBy = "municipality")
   var locations: MutableSet<Location>? = null
 
 }
