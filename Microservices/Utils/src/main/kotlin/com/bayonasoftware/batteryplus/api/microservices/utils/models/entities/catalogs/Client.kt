@@ -21,14 +21,14 @@ class Client : java.io.Serializable {
   @get:Column(name = "Name", nullable = false)
   var name: String? = null
 
-  @get:Column(name = "Clasification")
-  var clasification: String? = null
+  @get:Column(name = "Classification")
+  var classification: String? = null
 
   @get:Column(name = "Seller")
   var seller: String? = null
 
-  @get:Column(name = "Has_Veicle_Flet")
-  var vehicleFlet: Boolean? = null
+  @get:Column(name = "Has_Veicle_Fleet")
+  var vehicleFleet: Boolean? = null
 
   @get:Column(name = "Active")
   val active = false

@@ -27,10 +27,6 @@
     <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.catalogs.WarehouseSection" />
     <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.oauth.User" />
     <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.oauth.Rol" />
-    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.CoverageType" />
-    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.CoverageBciBase" />
-    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.CoverageBrand" />
-    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.CoverageSubBrand" />
     <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.Agrupation" />
     <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.Line" />
     <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.Brand" />
@@ -38,6 +34,10 @@
     <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.BciBase" />
     <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.BciUsed" />
     <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.BciWarranty" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.CoverageType" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.CoverageBciBase" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.CoverageBrand" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.CoverageSubBrand" />
     <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.Accumulator" />
 
   </session-factory>

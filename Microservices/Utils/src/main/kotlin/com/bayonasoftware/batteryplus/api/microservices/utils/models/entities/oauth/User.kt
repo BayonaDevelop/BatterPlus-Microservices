@@ -7,7 +7,7 @@ import javax.persistence.*
 
 @JsonIgnoreProperties("hibernateLazyInitializer")
 @Entity
-@Table(schema = "dbo", name = "User")
+@Table(schema = "dbo", name = "Users")
 class User : java.io.Serializable {
 
   private val serialVersionUID = 1L
