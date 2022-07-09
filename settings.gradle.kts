@@ -1,3 +1,3 @@
 rootProject.name = "API"
-include("Infrastructure")
+include("Infrastructure", "Infrastructure:Server-Config")
 include("Microservices", "Microservices:Utils", "Microservices:Services")
