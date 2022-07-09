@@ -39,6 +39,8 @@
     <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.CoverageBrand" />
     <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.CoverageSubBrand" />
     <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.Accumulator" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.movements.Movement" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.movements.MovementDetail" />
 
   </session-factory>
 </hibernate-configuration>
