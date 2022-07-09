@@ -1,0 +1,17 @@
+spring:
+  cloud:
+    gateway:
+      routes:
+        - id: service-commons
+          uri: lb://service-commons
+          predicates:
+            - Path=/api/v1/commons/**
+          filters:
+            - StripPrefix=3
+
+        - id: service-security
+          uri: lb://service-security
+          predicates:
+            - Path=/security/**
+          filters:
+            - StripPrefix=1
