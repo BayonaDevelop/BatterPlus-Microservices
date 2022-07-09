@@ -14,15 +14,15 @@ class Line : java.io.Serializable {
   @Id
   @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", unique = true, nullable = false)
-  val id: Int? = null
+  var id: Int? = null
 
   @get:Column(name = "Name", nullable = false)
-  val name: String? = null
+  var name: String? = null
 
   @get:Column(name = "Active")
-  val active = false
+  var active = false
 
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "line")
-  val bciWarranties: MutableSet<BciWarranty>? = null
+  var bciWarranties: MutableSet<BciWarranty>? = null
 }

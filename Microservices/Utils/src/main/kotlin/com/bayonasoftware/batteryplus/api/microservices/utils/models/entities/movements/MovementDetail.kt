@@ -13,14 +13,14 @@ class MovementDetail : java.io.Serializable {
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Movement_ID")
-  val movement: Movement? = null
+  var movement: Movement? = null
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Accumulator_ID")
-  val accumulator: Accumulator? = null
+  var accumulator: Accumulator? = null
 
   @Id
   @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", unique = true, nullable = false)
-  val id: Int? = null
+  var id: Int? = null
 }

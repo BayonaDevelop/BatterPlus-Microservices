@@ -12,17 +12,17 @@ class Telephone : java.io.Serializable {
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Person_ID", nullable = false)
-  val person: Person? = null
+  var person: Person? = null
 
   @Id
   @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", unique = true, nullable = false)
-  val id: Int? = null
+  var id: Int? = null
 
   @get:Column(name = "Number")
-  val number: String? = null
+  var number: String? = null
 
   @get:Column(name = "Extensions")
-  val extensions: String? = null
+  var extensions: String? = null
 
 }

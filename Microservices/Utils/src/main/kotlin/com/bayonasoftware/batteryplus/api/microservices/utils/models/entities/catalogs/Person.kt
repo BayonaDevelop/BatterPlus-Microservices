@@ -14,33 +14,33 @@ class Person : java.io.Serializable {
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Address_ID", nullable = false)
-  val address: Address? = null
+  var address: Address? = null
 
   @Id
   @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", unique = true, nullable = false)
-  val id: Int? = null
+  var id: Int? = null
 
   @get:Column(name = "Name", nullable = false)
-  val name: String? = null
+  var name: String? = null
 
   @get:Column(name = "Last_Name", nullable = false)
-  val lastName: String? = null
+  var lastName: String? = null
 
   @get:Column(name = "Second_Last_Name")
-  val secondLastName: String? = null
+  var secondLastName: String? = null
 
   @get:Column(name = "INE")
-  val ine: String? = null
+  var ine: String? = null
 
   @get:Column(name = "Driver_License")
-  val driverLicense: String? = null
+  var driverLicense: String? = null
 
   @get:Column(name = "Email")
-  val email: String? = null
+  var email: String? = null
 
   @get:JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "person")
-  val telephones: MutableSet<Telephone>? = null
+  var telephones: MutableSet<Telephone>? = null
   
 }

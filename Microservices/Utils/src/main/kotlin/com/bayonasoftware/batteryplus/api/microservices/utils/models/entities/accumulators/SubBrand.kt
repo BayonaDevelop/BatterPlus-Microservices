@@ -13,31 +13,31 @@ class SubBrand : java.io.Serializable {
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Brand_ID", nullable = false)
-  val brand: Brand? = null
+  var brand: Brand? = null
 
   @Id
   @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", unique = true, nullable = false)
-  val id: Int? = null
+  var id: Int? = null
 
   @get:Column(name = "Name", nullable = false)
-  val name: String? = null
+  var name: String? = null
 
   @get:Column(name = "Initials", length = 10)
-  val initials: String? = null
+  var initials: String? = null
 
   @get:Column(name = "Suffix", length = 10)
-  val suffix: String? = null
+  var suffix: String? = null
 
   @get:Column(name = "Active")
-  val active = false
+  var active = false
 
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "subBrand")
-  val bciWarranties: MutableSet<BciWarranty>? = null
+  var bciWarranties: MutableSet<BciWarranty>? = null
 
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "subBrand")
-  val coverageSubBrands: MutableSet<CoverageSubBrand>? = null
+  var coverageSubBrands: MutableSet<CoverageSubBrand>? = null
 
 }

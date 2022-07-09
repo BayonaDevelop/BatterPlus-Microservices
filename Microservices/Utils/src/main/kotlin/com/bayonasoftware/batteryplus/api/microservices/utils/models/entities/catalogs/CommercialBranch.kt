@@ -15,41 +15,41 @@ class CommercialBranch : java.io.Serializable {
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Address_ID", nullable = false)
-  val address: Address? = null
+  var address: Address? = null
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Matrix_ID")
-  val matrix: CommercialBranch? = null
+  var matrix: CommercialBranch? = null
 
   @Id
   @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", unique = true, nullable = false)
-  val id: Int? = null
+  var id: Int? = null
 
   @get:Column(name = "Name", nullable = false)
-  val name: String? = null
+  var name: String? = null
 
   @get:Column(name = "Active")
-  val active = false
+  var active = false
 
   @get:Column(name = "Matrix")
-  val _isMatrix = false
+  var _isMatrix = false
 
   @get:Column(name = "Latitude", precision = 16, scale = 10)
-  val latitude: BigDecimal? = null
+  var latitude: BigDecimal? = null
 
   @get:Column(name = "Longitude", precision = 16, scale = 10)
-  val longitude: BigDecimal? = null
+  var longitude: BigDecimal? = null
 
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "matrix")
-  val commercialBranches: MutableSet<CommercialBranch>? = null
+  var commercialBranches: MutableSet<CommercialBranch>? = null
 
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "commercialBranch")
-  val warehouses: MutableSet<Warehouse>? = null
+  var warehouses: MutableSet<Warehouse>? = null
 
   /*@JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "commercialBranch")
-  val users: MutableSet<User>? = null*/
+  var users: MutableSet<User>? = null*/
 }

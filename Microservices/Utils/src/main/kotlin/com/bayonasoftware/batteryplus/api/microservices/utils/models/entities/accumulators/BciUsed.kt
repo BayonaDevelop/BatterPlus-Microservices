@@ -13,24 +13,24 @@ class BciUsed : java.io.Serializable {
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Bci_Base_ID", nullable = false)
-  val bciBase: BciBase? = null
+  var bciBase: BciBase? = null
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Brand_ID", nullable = false)
-  val brand: Brand? = null
+  var brand: Brand? = null
 
   @Id
   @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", unique = true, nullable = false)
-  val id: Int? = null
+  var id: Int? = null
 
   @get:Column(name = "Amperage", nullable = false)
-  val amperage: String? = null
+  var amperage: String? = null
 
   @get:Column(name = "Active")
-  val active = false
+  var active = false
 
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "bciUsed")
-  val accumulators: MutableSet<Accumulator>? = null
+  var accumulators: MutableSet<Accumulator>? = null
 }

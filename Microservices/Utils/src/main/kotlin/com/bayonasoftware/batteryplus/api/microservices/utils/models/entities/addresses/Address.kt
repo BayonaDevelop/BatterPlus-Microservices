@@ -42,14 +42,14 @@ class Address : java.io.Serializable {
 
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "address")
-  val persons: MutableSet<Person>? = null
+  var persons: MutableSet<Person>? = null
 
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "address")
-  val commercialBranches: MutableSet<CommercialBranch>? = null
+  var commercialBranches: MutableSet<CommercialBranch>? = null
 
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "address")
-  val warehouses: MutableSet<Warehouse>? = null
+  var warehouses: MutableSet<Warehouse>? = null
 
 }

@@ -15,57 +15,57 @@ class Accumulator : java.io.Serializable {
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Bci_Used_ID", nullable = false)
-  val bciUsed: BciUsed? = null
+  var bciUsed: BciUsed? = null
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Bci_Warranty_ID", nullable = false)
-  val bciWarranty: BciWarranty? = null
+  var bciWarranty: BciWarranty? = null
 
   @Id
   @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", unique = true, nullable = false)
-  val id: Int? = null
+  var id: Int? = null
 
   @get:Column(name = "Status_ID", nullable = false)
-  val statusId: Int? = null
+  var statusId: Int? = null
 
   @get:Column(name = "Previous_Status_ID")
-  val previousStatusId: Int? = null
+  var previousStatusId: Int? = null
 
   @get:Column(name = "Policy", nullable = false)
-  val policy: String? = null
+  var policy: String? = null
 
   @get:Column(name = "Bill")
-  val bill: String? = null
+  var bill: String? = null
 
   @get:Column(name = "Purchase_Note")
-  val purchaseNote: String? = null
+  var purchaseNote: String? = null
 
   @get:Column(name = "Voltage", precision = 16)
-  val voltage: BigDecimal? = null
+  var voltage: BigDecimal? = null
 
   @get:Column(name = "Price", precision = 16)
-  val price: BigDecimal? = null
+  var price: BigDecimal? = null
 
   @get:Column(name = "From_Taxist")
-  val fromTaxist: Boolean? = null
+  var fromTaxist: Boolean? = null
 
   @get:Column(name = "Pressable")
-  val pressable: Boolean? = null
+  var pressable: Boolean? = null
 
   @get:Column(name = "Borrowed")
-  val borrowed: Boolean? = null
+  var borrowed: Boolean? = null
 
   @get:Temporal(TemporalType.TIMESTAMP)
   @get:Column(name = "Admission_Date", length = 23)
-  val admissionDate: Date? = null
+  var admissionDate: Date? = null
 
   @get:Temporal(TemporalType.TIMESTAMP)
   @get:Column(name = "Policy_Date", length = 23)
-  val policyDate: Date? = null
+  var policyDate: Date? = null
 
   @get:Temporal(TemporalType.TIMESTAMP)
   @get:Column(name = "Sale_Date", length = 23)
-  val saleDate: Date? = null
+  var saleDate: Date? = null
 
 }

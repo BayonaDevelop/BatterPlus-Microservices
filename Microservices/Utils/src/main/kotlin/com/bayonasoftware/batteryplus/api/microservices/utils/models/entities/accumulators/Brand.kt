@@ -14,32 +14,32 @@ class Brand : java.io.Serializable {
   @Id
   @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", unique = true, nullable = false)
-  val id: Int? = null
+  var id: Int? = null
 
   @get:Column(name = "Name", nullable = false)
-  val name: String? = null
+  var name: String? = null
 
   @get:Column(name = "Initials", length = 10)
-  val initials: String? = null
+  var initials: String? = null
 
   @get:Column(name = "Own")
-  val own = false
+  var own = false
 
   @get:Column(name = "Active")
-  val active = false
+  var active = false
 
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "brand")
-  val subBrands: MutableSet<SubBrand>? = null
+  var subBrands: MutableSet<SubBrand>? = null
 
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "brand")
-  val bciUseds: MutableSet<BciUsed>? = null
+  var bciUseds: MutableSet<BciUsed>? = null
 
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "brand")
-  val bciWarranties: MutableSet<BciWarranty>? = null
+  var bciWarranties: MutableSet<BciWarranty>? = null
 
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "brand")
-  val coverages: MutableSet<CoverageBrand>? = null
+  var coverages: MutableSet<CoverageBrand>? = null
 
 }

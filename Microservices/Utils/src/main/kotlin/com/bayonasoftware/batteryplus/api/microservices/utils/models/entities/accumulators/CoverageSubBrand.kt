@@ -12,24 +12,24 @@ class CoverageSubBrand : java.io.Serializable {
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Coverage_Type_ID", nullable = false)
-  val coverageType: CoverageType? = null
+  var coverageType: CoverageType? = null
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Sub_Brand_ID", nullable = false)
-  val subBrand: SubBrand? = null
+  var subBrand: SubBrand? = null
 
   @Id
   @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", unique = true, nullable = false)
-  val id: Int? = null
+  var id: Int? = null
 
   @Column(name = "Monts_Start", nullable = false)
-  val montsStart: Int? = null
+  var montsStart: Int? = null
 
   @Column(name = "Monts_End", nullable = false)
-  val montsEnd: Int? = null
+  var montsEnd: Int? = null
 
   @Column(name = "Percentaje", nullable = false)
-  val percentaje: Int? = null
+  var percentaje: Int? = null
 
 }
