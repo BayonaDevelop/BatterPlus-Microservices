@@ -13,12 +13,12 @@ class WarehouseSection : java.io.Serializable {
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Warehouse_ID", nullable = false)
-  val warehouse: Warehouse? = null
+  var warehouse: Warehouse? = null
 
   @Id
   @get:Column(name = "ID", unique = true, nullable = false)
-  val id: Int? = null
+  var id: Int? = null
 
   @get:Column(name = "Name", nullable = false)
-  val name: String? = null
+  var name: String? = null
 }

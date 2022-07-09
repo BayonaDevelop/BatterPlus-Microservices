@@ -8,28 +8,28 @@ import javax.persistence.*
 @Table(schema = "dbo", name = "Coverage_Bci_Base")
 class CoverageBciBase : java.io.Serializable {
 
-  val serialVersionUID = 1L
+  var serialVersionUID = 1L
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Coverage_Type_ID", nullable = false)
-  val coverageType: CoverageType? = null
+  var coverageType: CoverageType? = null
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Bci_Base_ID", nullable = false)
-  val bciBase: BciBase? = null
+  var bciBase: BciBase? = null
 
   @Id
   @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", unique = true, nullable = false)
-  val id: Int? = null
+  var id: Int? = null
 
   @Column(name = "Monts_Start", nullable = false)
-  val montsStart: Int? = null
+  var montsStart: Int? = null
 
   @Column(name = "Monts_End", nullable = false)
-  val montsEnd: Int? = null
+  var montsEnd: Int? = null
 
   @Column(name = "Percentaje", nullable = false)
-  val percentaje: Int? = null
+  var percentaje: Int? = null
 
 }

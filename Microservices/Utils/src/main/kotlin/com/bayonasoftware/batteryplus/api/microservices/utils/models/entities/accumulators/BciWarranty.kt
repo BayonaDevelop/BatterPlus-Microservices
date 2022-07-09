@@ -13,32 +13,32 @@ class BciWarranty : java.io.Serializable {
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Bci_Base_ID", nullable = false)
-  val bciBase: BciBase? = null
+  var bciBase: BciBase? = null
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Line_ID", nullable = false)
-  val line: Line? = null
+  var line: Line? = null
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Brand_ID", nullable = false)
-  val brand: Brand? = null
+  var brand: Brand? = null
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Sub_Brand_ID", nullable = false)
-  val subBrand: SubBrand? = null
+  var subBrand: SubBrand? = null
 
   @Id
   @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", unique = true, nullable = false)
-  val id: Int? = null
+  var id: Int? = null
 
   @get:Column(name = "Amperage", nullable = false)
-  val amperage: String? = null
+  var amperage: String? = null
 
   @get:Column(name = "Active")
-  val active = false
+  var active = false
 
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "bciWarranty")
-  val accumulators: MutableSet<Accumulator>? = null
+  var accumulators: MutableSet<Accumulator>? = null
 }

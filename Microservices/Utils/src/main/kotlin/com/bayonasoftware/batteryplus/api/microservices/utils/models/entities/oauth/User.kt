@@ -14,28 +14,28 @@ class User : java.io.Serializable {
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Commercial_Branch_ID")
-  val commercialBranch: CommercialBranch? = null
+  var commercialBranch: CommercialBranch? = null
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Person_ID", nullable = false)
-  val person: Person? = null
+  var person: Person? = null
 
   @Id
   @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", unique = true, nullable = false)
-  val id: Int? = null
+  var id: Int? = null
 
   @get:Column(name = "Name", nullable = false)
-  val name: String? = null
+  var name: String? = null
 
   @get:Column(name = "Password", nullable = false)
-  val password: String? = null
+  var password: String? = null
 
   @get:Column(name = "Attempts", nullable = false)
-  val attempts: Int? = null
+  var attempts: Int? = null
 
   @get:Column(name = "Enabled", nullable = false)
-  val enabled = false
+  var enabled = false
 
   @ManyToMany(fetch = FetchType.EAGER, cascade = [CascadeType.ALL])
   @JoinTable(
@@ -44,6 +44,6 @@ class User : java.io.Serializable {
     joinColumns = [JoinColumn(name = "User_ID", referencedColumnName = "ID")],
     inverseJoinColumns = [JoinColumn(name = "Rol_ID", referencedColumnName = "ID")]
   )
-  val roles: Set<Rol>? = null
+  var roles: Set<Rol>? = null
   
 }

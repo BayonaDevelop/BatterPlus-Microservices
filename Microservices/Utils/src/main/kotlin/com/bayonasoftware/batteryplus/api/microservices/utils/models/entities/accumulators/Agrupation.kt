@@ -12,22 +12,23 @@ class Agrupation : java.io.Serializable {
   val serialVersionUID = 1L
 
   @Id
+  @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", unique = true, nullable = false)
-  val id: Int? = null
+  var id: Int? = null
 
   @get:Column(name = "Name", nullable = false)
-  val name: String? = null
+  var name: String? = null
 
   @get:Column(name = "Letter", length = 10)
-  val letter: String? = null
+  var letter: String? = null
 
   @get:Column(name = "Color", length = 80)
-  val color: String? = null
+  var color: String? = null
 
   @get:Column(name = "Active")
-  val active = false
+  var active = false
 
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "agrupation")
-  val bciBases: MutableSet<BciBase>? = null
+  var bciBases: MutableSet<BciBase>? = null
 }

@@ -14,21 +14,21 @@ class CoverageType : java.io.Serializable {
   @Id
   @get:GeneratedValue(strategy = GenerationType.IDENTITY)
   @get:Column(name = "ID", unique = true, nullable = false)
-  val id: Int? = null
+  var id: Int? = null
 
   @get:Column(name = "Name", nullable = false)
-  val name: String? = null
+  var name: String? = null
 
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "coverageType")
-  val coverageBciBases: MutableSet<CoverageBciBase>? = null
+  var coverageBciBases: MutableSet<CoverageBciBase>? = null
 
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "coverageType")
-  val coverageBrands: MutableSet<CoverageBrand>? = null
+  var coverageBrands: MutableSet<CoverageBrand>? = null
 
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "coverageType")
-  val coverageSubBrands: MutableSet<CoverageSubBrand>? = null
+  var coverageSubBrands: MutableSet<CoverageSubBrand>? = null
 
 }
