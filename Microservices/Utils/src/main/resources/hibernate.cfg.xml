@@ -12,20 +12,35 @@
     <property name="hibernate.connection.pool_size">100</property>
     <property name="show_sql">true</property>
 
-    <!-- <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Country"/>
-    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.City"/>
-    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Municipality"/>
-    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Location"/>
-    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Colony"/>
-    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Street"/>
-    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Address"/>
-    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.CommercialBranch"/>
-    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Warehouse"/>
-    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.WarehouseSection"/>
-    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Person"/>
-    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Telephone"/>
-    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.User"/>
-    <mapping  class="com.bayonasoftware.batteryplus.microservices.utils.entities.Rol"/> -->
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.addresses.Country" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.addresses.City" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.addresses.Municipality" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.addresses.Location" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.addresses.Colony" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.addresses.Street" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.addresses.Address" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.catalogs.Client" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.catalogs.Person" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.catalogs.Telephone" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.catalogs.CommercialBranch" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.catalogs.Warehouse" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.catalogs.WarehouseSection" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.oauth.User" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.oauth.Rol" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.Agrupation" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.Line" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.Brand" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.SubBrand" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.BciBase" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.BciUsed" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.BciWarranty" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.CoverageType" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.CoverageBciBase" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.CoverageBrand" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.CoverageSubBrand" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.accumulators.Accumulator" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.movements.Movement" />
+    <mapping class="com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.movements.MovementDetail" />
 
   </session-factory>
 </hibernate-configuration>

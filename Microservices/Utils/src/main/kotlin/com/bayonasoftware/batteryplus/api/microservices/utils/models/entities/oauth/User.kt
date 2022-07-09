@@ -7,10 +7,10 @@ import javax.persistence.*
 
 @JsonIgnoreProperties("hibernateLazyInitializer")
 @Entity
-@Table(schema = "dbo", name = "User")
+@Table(schema = "dbo", name = "Users")
 class User : java.io.Serializable {
 
-  val serialVersionUID = 1L
+  private val serialVersionUID = 1L
 
   @ManyToOne(fetch = FetchType.LAZY)
   @JoinColumn(name = "Commercial_Branch_ID")

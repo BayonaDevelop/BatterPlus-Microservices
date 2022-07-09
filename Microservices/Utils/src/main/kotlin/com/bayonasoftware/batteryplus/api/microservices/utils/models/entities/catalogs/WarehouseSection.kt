@@ -1,10 +1,8 @@
 package com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.catalogs
 
+import com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.addresses.Address
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
-import javax.persistence.Column
-import javax.persistence.Entity
-import javax.persistence.Id
-import javax.persistence.Table
+import javax.persistence.*
 
 @JsonIgnoreProperties("hibernateLazyInitializer")
 @Entity
@@ -12,6 +10,10 @@ import javax.persistence.Table
 class WarehouseSection : java.io.Serializable {
 
   private val serialVersionUID = 1L
+
+  @ManyToOne(fetch = FetchType.LAZY)
+  @JoinColumn(name = "Warehouse_ID", nullable = false)
+  val warehouse: Warehouse? = null
 
   @Id
   @get:Column(name = "ID", unique = true, nullable = false)

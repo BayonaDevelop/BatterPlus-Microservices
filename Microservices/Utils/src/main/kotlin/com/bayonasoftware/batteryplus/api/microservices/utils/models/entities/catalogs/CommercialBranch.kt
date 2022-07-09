@@ -1,7 +1,6 @@
 package com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.catalogs
 
 import com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.addresses.Address
-import com.bayonasoftware.batteryplus.api.microservices.utils.models.entities.oauth.User
 import com.fasterxml.jackson.annotation.JsonIgnore
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties
 import java.math.BigDecimal
@@ -50,7 +49,7 @@ class CommercialBranch : java.io.Serializable {
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "commercialBranch")
   val warehouses: MutableSet<Warehouse>? = null
 
-  @JsonIgnore
+  /*@JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "commercialBranch")
-  val users: MutableSet<User>? = null
+  val users: MutableSet<User>? = null*/
 }

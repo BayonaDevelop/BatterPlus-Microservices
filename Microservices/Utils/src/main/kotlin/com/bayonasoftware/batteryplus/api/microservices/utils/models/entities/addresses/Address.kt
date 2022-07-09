@@ -31,6 +31,19 @@ class Address : java.io.Serializable {
   @get:Column(name = "ID", nullable = false)
   var id:Int? = null
 
+  @get:Column(name = "Internal_Number", length = 60)
+  var internalNumber: String? = null
+
+  @get:Column(name = "External_Number", length = 60)
+  var externalNumber: String? = null
+
+  @get:Column(name = "Reference")
+  var reference: String? = null
+
+  @JsonIgnore
+  @OneToMany(fetch = FetchType.LAZY, mappedBy = "address")
+  val persons: MutableSet<Person>? = null
+
   @JsonIgnore
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "address")
   val commercialBranches: MutableSet<CommercialBranch>? = null
@@ -39,7 +52,4 @@ class Address : java.io.Serializable {
   @OneToMany(fetch = FetchType.LAZY, mappedBy = "address")
   val warehouses: MutableSet<Warehouse>? = null
 
-  @JsonIgnore
-  @OneToMany(fetch = FetchType.LAZY, mappedBy = "address")
-  val persons: MutableSet<Person>? = null
 }

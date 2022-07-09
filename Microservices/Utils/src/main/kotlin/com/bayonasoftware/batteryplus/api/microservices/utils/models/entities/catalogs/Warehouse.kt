@@ -8,7 +8,7 @@ import javax.persistence.*
 
 @JsonIgnoreProperties("hibernateLazyInitializer")
 @Entity
-@Table(schema = "dbo", name = "Commercial_Branch")
+@Table(schema = "dbo", name = "Warehouse")
 class Warehouse : java.io.Serializable {
 
   val serialVersionUID = 1L
@@ -38,6 +38,6 @@ class Warehouse : java.io.Serializable {
   val longitude: BigDecimal? = null
 
   @JsonIgnore
-  @OneToMany(fetch = FetchType.LAZY, mappedBy = "commercialBranch")
-  val warehouses: Set<Warehouse>? = null
+  @OneToMany(fetch = FetchType.LAZY, mappedBy = "warehouse")
+  val warehouses: MutableSet<WarehouseSection>? = null
 }
